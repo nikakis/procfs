@@ -1,4 +1,4 @@
-module github.com/prometheus/procfs
+module github.com/nikakis/procfs
 
 go 1.13
 

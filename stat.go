@@ -21,8 +21,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/prometheus/procfs/internal/fs"
-	"github.com/prometheus/procfs/internal/util"
+	"github.com/nikakis/procfs/internal/fs"
+	"github.com/nikakis/procfs/internal/util"
 )
 
 // CPUStat shows how much time the cpu spend in various stages.

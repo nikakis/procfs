@@ -11,6 +11,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+//go:build !windows
 // +build !windows
 
 package procfs
@@ -18,7 +19,7 @@ package procfs
 import (
 	"os"
 
-	"github.com/prometheus/procfs/internal/util"
+	"github.com/nikakis/procfs/internal/util"
 )
 
 // KernelRandom contains information about to the kernel's random number generator.

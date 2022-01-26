@@ -11,12 +11,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+//go:build linux
 // +build linux
 
 package sysfs
 
 import (
-	"github.com/prometheus/procfs/internal/fs"
+	"github.com/nikakis/procfs/internal/fs"
 )
 
 // FS represents the pseudo-filesystem sys, which provides an interface to

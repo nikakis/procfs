@@ -11,6 +11,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+//go:build linux
 // +build linux
 
 package procfs
@@ -24,7 +25,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/prometheus/procfs/internal/util"
+	"github.com/nikakis/procfs/internal/util"
 )
 
 // CPUInfo contains general information about a system CPU found in /proc/cpuinfo.

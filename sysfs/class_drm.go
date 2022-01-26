@@ -11,6 +11,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+//go:build linux
 // +build linux
 
 package sysfs
@@ -18,7 +19,7 @@ package sysfs
 import (
 	"path/filepath"
 
-	"github.com/prometheus/procfs/internal/util"
+	"github.com/nikakis/procfs/internal/util"
 )
 
 func readDRMCardField(card, field string) (string, error) {

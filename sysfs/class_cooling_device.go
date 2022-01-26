@@ -11,6 +11,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+//go:build linux
 // +build linux
 
 package sysfs
@@ -20,7 +21,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/prometheus/procfs/internal/util"
+	"github.com/nikakis/procfs/internal/util"
 )
 
 // ClassCoolingDeviceStats contains info from files in /sys/class/thermal/cooling_device[0-9]*

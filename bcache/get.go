@@ -23,7 +23,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/prometheus/procfs/internal/fs"
+	"github.com/nikakis/procfs/internal/fs"
 )
 
 // FS represents the pseudo-filesystem proc, which provides an interface to

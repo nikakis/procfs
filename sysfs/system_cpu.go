@@ -11,6 +11,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+//go:build linux
 // +build linux
 
 package sysfs
@@ -25,7 +26,7 @@ import (
 
 	"golang.org/x/sync/errgroup"
 
-	"github.com/prometheus/procfs/internal/util"
+	"github.com/nikakis/procfs/internal/util"
 )
 
 // CPU represents a path to a CPU located in `/sys/devices/system/cpu/cpu[0-9]*`.
