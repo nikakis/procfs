@@ -144,7 +144,7 @@ type TcpExt struct {
 	TCPKeepAlive              float64
 	TCPMTUPFail               float64
 	TCPMTUPSuccess            float64
-	TCPWqueueTooBig           float64
+	TCPWqueueTooBig           *float64
 }
 
 type IpExt struct {
@@ -183,7 +183,7 @@ func (p Proc) Netstat() (ProcNetstat, error) {
 // and returns a ProcNetstat structure.
 func parseNetstat(r io.Reader, fileName string) (ProcNetstat, error) {
 	var (
-		scanner  = bufio.NewScanner(r)
+		scanner     = bufio.NewScanner(r)
 		procNetstat = ProcNetstat{}
 	)
 
@@ -392,7 +392,7 @@ func parseNetstat(r io.Reader, fileName string) (ProcNetstat, error) {
 				case "TCPMTUPSuccess":
 					procNetstat.TcpExt.TCPMTUPSuccess = value
 				case "TCPWqueueTooBig":
-					procNetstat.TcpExt.TCPWqueueTooBig = value
+					procNetstat.TcpExt.TCPWqueueTooBig = &value
 				}
 			case "IpExt":
 				switch key {
